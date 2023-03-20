@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function tryRemoveFromArray(i, arr){
+    let j = 0;
+    let k = [];
+    if(i < arr.length) {
+      for (j = 0; j < arr.length; j++) {
+        if(j == i){
+          continue
+        }else {
+          k.push(arr[j]);
+        }
+      }
+    }else{
+      return arr;
+    }
+    return k;
+  }
+  console.log(tryRemoveFromArray(6, [0,1,2,3,4]))
+</script>
+
+</body>
+</html>

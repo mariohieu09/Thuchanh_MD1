@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function timkiem(c1, c2) {
+      for (let i = 0; i < c2.length; i++) {
+          for (let j = 0; j < c1.length; j++) {
+              if (c2[i + j] !== c1[j]) {
+                  break
+              }
+              if (j === c1.length - 1 && c2[i + j] === c1[j]) {
+                  return true
+              }
+          }
+      }
+      return false
+  }
+
+  console.log(timkiem("nhap", "nhapten"))
+
+</script>
+</body>
+</html>
