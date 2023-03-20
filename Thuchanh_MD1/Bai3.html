@@ -7,20 +7,24 @@
 <body>
 <script>
   function timkiem(c1, c2) {
+      let count = 0;
       for (let i = 0; i < c2.length; i++) {
           for (let j = 0; j < c1.length; j++) {
-              if (c2[i + j] !== c1[j]) {
+              if (c2[i + j] !== c1[j]){
+                  count = 0
                   break
-              }
-              if (j === c1.length - 1 && c2[i + j] === c1[j]) {
-                  return true
+              } else {
+                  count++;
+                  if(count == c1.length){
+                      return true
+                  }
               }
           }
       }
       return false
   }
 
-  console.log(timkiem("nhap", "nhapten"))
+  console.log(timkiem("nhap", "snhapten"))
 
 </script>
 </body>
